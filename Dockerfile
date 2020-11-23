@@ -1,4 +1,4 @@
-FROM hasura/graphql-engine:v1.3.2
+FROM hasura/graphql-engine:v1.3.3
 
 # Enable the console
 ENV HASURA_GRAPHQL_ENABLE_CONSOLE=false
@@ -8,7 +8,7 @@ ENV HASURA_GRAPHQL_DEV_MODE=false
 
 # Heroku hobby tier PG has few limitations including 20 max connections
 # https://devcenter.heroku.com/articles/heroku-postgres-plans#hobby-tier
-ENV HASURA_GRAPHQL_PG_CONNECTIONS=15
+# ENV HASURA_GRAPHQL_PG_CONNECTIONS=15
 
 # Change $DATABASE_URL to your heroku postgres URL if you're not using
 # the primary postgres instance in your app
